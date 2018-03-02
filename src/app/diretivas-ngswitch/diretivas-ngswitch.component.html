@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="nav navbar-nav">
+    <a class="nav-item nav-link" 
+      [class.active]="aba =='home'"
+      (click)="aba='home'">Home</a>
+
+      <a class="nav-item nav-link" 
+      [class.active]="aba =='produtos'" 
+      (click)="aba='produtos'">Produtos</a>
+
+      <a class="nav-item nav-link" 
+      [class.active]="aba =='sobre'" 
+      (click)="aba='sobre'">Sobre</a>
+  </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <div *ngSwitchDefault>Home
+  </div>
+  <p *ngSwitchCase="'produtos'">Produtos</p>
+  <p *ngSwitchCase="'sobre'">Sobre</p>
+
+  
+</div>
